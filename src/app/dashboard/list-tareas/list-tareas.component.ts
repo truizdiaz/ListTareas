@@ -28,4 +28,9 @@ export class ListTareasComponent implements OnInit {
     this.listTareas.splice(index, 1);
   }
 
+  actualizarTarea(tarea, index) {
+    this.listTareas[index].finalizada = !tarea.finalizada;
+    console.log(this.listTareas);
+  }
+
 }
