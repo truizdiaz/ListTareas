@@ -9,5 +9,12 @@
                 [disabled]="tarea ==''"> Agregar</button>
             </div>
         </div>
+        <br>
+        <h5 *ngIf="listTareas.length == 0">No hay tareas para realizar</h5>
+        <ul>
+            <li *ngFor="let tarea of listTareas">
+                {{ tarea.nombre }}
+            </li>
+        </ul>
     </div>
 </div>

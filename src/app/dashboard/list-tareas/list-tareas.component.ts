@@ -7,13 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListTareasComponent implements OnInit {
   tarea = '';
+  listTareas: any[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
   agregarTarea(){
-    console.log(this.tarea);
+    const tarea = {
+      nombre: this.tarea,
+      finalizada: false
+    };
+    this.listTareas.push(tarea);
+    console.log(this.listTareas);
     this.tarea = '';
   }
 
