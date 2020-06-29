@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ListTareas"
+    }
+  },
+  "defaultProject": "ListTareas",
+  "cli": {
+    "analytics": "d389184d-d555-4508-bf6c-18b229874564"
+  }
 }
