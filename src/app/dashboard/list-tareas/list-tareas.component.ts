@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-tareas.component.css']
 })
 export class ListTareasComponent implements OnInit {
-
+  tarea = '';
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  agregarTarea(){
+    console.log(this.tarea);
+    this.tarea = '';
   }
 
 }

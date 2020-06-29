@@ -1,5 +1,13 @@
 <div class="card mt-4">
     <div class="card-body">
-        INPUT
+        <div class="input-group">
+            <input type="text" placeholder="Agregar Tarea" class="form-control form-control-lg"
+            [(ngModel)]="tarea">
+            <div class="input-group-append">
+                <button type="button" class="btn btn-success btn-lg" 
+                (click)="agregarTarea()"
+                [disabled]="tarea ==''"> Agregar</button>
+            </div>
+        </div>
     </div>
 </div>
