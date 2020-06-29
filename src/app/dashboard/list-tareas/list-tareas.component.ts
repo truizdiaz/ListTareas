@@ -24,4 +24,8 @@ export class ListTareasComponent implements OnInit {
     this.tarea = '';
   }
 
+  eliminarTarea(index: number) {
+    this.listTareas.splice(index, 1);
+  }
+
 }

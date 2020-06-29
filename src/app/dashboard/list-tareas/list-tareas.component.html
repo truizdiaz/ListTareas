@@ -11,9 +11,16 @@
         </div>
         <br>
         <h5 *ngIf="listTareas.length == 0">No hay tareas para realizar</h5>
-        <ul>
-            <li *ngFor="let tarea of listTareas">
+        <ul class="list-group">
+            <li *ngFor="let tarea of listTareas; let i = index" 
+                class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="cursor">
+                    <i class="far fa-circle"></i>
+                </span>
                 {{ tarea.nombre }}
+                <span class="text-danger cursor" (click)="eliminarTarea(i)">
+                    <i class="far fa-trash-alt"></i>
+                </span>
             </li>
         </ul>
     </div>
